@@ -5,7 +5,10 @@ import Loading from "../components/reusable/Loading";
 
 const PrivateRoute = ({ children }) => {
   const { pathname } = useLocation();
-  const { isLoading, email } = useSelector((state) => state.auth);
+  const {
+    user: { isLoading, email },
+  } = useSelector((state) => state.auth);
+
   console.log(email);
 
   if (isLoading) {
