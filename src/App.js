@@ -20,7 +20,7 @@ function App() {
         dispatch(toggleLoading());
       }
     });
-  }, [dispatch, isLoading]);
+  }, [dispatch]);
 
   return (
     <>
