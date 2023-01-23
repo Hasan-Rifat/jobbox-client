@@ -23,8 +23,7 @@ const AddJob = () => {
   } = useFieldArray({ control, name: "requirements" });
 
   const onSubmit = (data) => {
-    console.log(data);
-    postJob(data);
+    postJob({ ...data, applicants: [], queries: [] });
   };
 
   return (
